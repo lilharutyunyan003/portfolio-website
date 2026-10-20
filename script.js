@@ -1,114 +1,101 @@
 document.addEventListener('DOMContentLoaded', () => {
   
-  // 1. Dynamic Copyright Year
-  const yearSpan = document.getElementById('current-year');
-  if (yearSpan) yearSpan.textContent = new Date().getFullYear();
-
-  // 2. Custom Cursor (Desktop Only)
-  const cursorDot = document.querySelector('.cursor-dot');
-  const cursorOutline = document.querySelector('.cursor-outline');
-  
-  if (window.matchMedia("(pointer: fine)").matches && cursorDot && cursorOutline) {
-    window.addEventListener('mousemove', (e) => {
-      cursorDot.style.left = `${e.clientX}px`;
-      cursorDot.style.top = `${e.clientY}px`;
-      cursorOutline.animate({
-        left: `${e.clientX}px`,
-        top: `${e.clientY}px`
-      }, { duration: 600, fill: "forwards" });
-    });
-
-    const hoverables = document.querySelectorAll('a, button, .magnetic, .project-link');
-    hoverables.forEach(el => {
-      el.addEventListener('mouseenter', () => cursorOutline.classList.add('hovered'));
-      el.addEventListener('mouseleave', () => cursorOutline.classList.remove('hovered'));
-    });
-  }
-
-  // 3. Magnetic Button Effect
-  if (window.matchMedia("(pointer: fine)").matches) {
-    const magneticBtns = document.querySelectorAll('.magnetic');
-    magneticBtns.forEach(btn => {
-      btn.addEventListener('mousemove', (e) => {
-        const rect = btn.getBoundingClientRect();
-        const x = e.clientX - rect.left - rect.width / 2;
-        const y = e.clientY - rect.top - rect.height / 2;
-        btn.style.transform = `translate(${x * 0.15}px, ${y * 0.15}px)`;
-      });
-      
-      btn.addEventListener('mouseleave', () => {
-        btn.style.transform = 'translate(0, 0)';
-        btn.style.transition = 'transform 0.4s cubic-bezier(0.16, 1, 0.3, 1)';
-      });
-      
-      btn.addEventListener('mouseenter', () => {
-        btn.style.transition = 'none';
-      });
-    });
-  }
-
-  // 4. Scroll Reveal Animation
-  const observerOptions = { threshold: 0.15, rootMargin: "0px 0px -50px 0px" };
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, observerOptions);
-
-  document.querySelectorAll('.reveal-text, .reveal-image').forEach(el => {
-    observer.observe(el);
-  });
-
-  // 5. Navbar Scroll Effect
-  const navbar = document.getElementById('navbar');
-  window.addEventListener('scroll', () => {
-    if (window.pageYOffset > 50) {
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
-    }
-  });
-
-  // 6. Mobile Menu Toggle
+  // 1. Mobile Menu Toggle
   const menuBtn = document.querySelector('.mobile-menu-btn');
-  const mobileMenu = document.getElementById('mobileMenu');
-  const mobileLinks = document.querySelectorAll('.mobile-link');
-
-  if (menuBtn && mobileMenu) {
+  const mobileNav = document.querySelector('.mobile-nav');
+  
+  if (menuBtn && mobileNav) {
     menuBtn.addEventListener('click', () => {
-      const isExpanded = menuBtn.getAttribute('aria-expanded') === 'true';
-      menuBtn.setAttribute('aria-expanded', !isExpanded);
       menuBtn.classList.toggle('active');
-      mobileMenu.classList.toggle('active');
-      document.body.style.overflow = isExpanded ? '' : 'hidden';
+      mobileNav.classList.toggle('active');
+      document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
     });
 
-    mobileLinks.forEach(link => {
+    document.querySelectorAll('.mobile-link').forEach(link => {
       link.addEventListener('click', () => {
-        menuBtn.setAttribute('aria-expanded', 'false');
         menuBtn.classList.remove('active');
-        mobileMenu.classList.remove('active');
+        mobileNav.classList.remove('active');
         document.body.style.overflow = '';
       });
     });
   }
 
-  // 7. Smooth Scroll for Anchor Links
+  // 2. Active Navigation on Scroll
+  const sections = document.querySelectorAll('.section');
+  const navItems = document.querySelectorAll('.nav-item');
+
+  const observerOptions = { root: null, rootMargin: '-30% 0px -60% 0px', threshold: 0 };
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navItems.forEach(item => item.classList.remove('active'));
+        const id = entry.target.getAttribute('id');
+        const activeNav = document.querySelector(`.nav-item[href="#${id}"]`);
+        if (activeNav) activeNav.classList.add('active');
+      }
+    });
+  }, observerOptions);
+
+  sections.forEach(section => observer.observe(section));
+
+  // 3. Fade In Animation on Scroll
+  const fadeElements = document.querySelectorAll('.fade-in');
+  const fadeObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        fadeObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  fadeElements.forEach(el => fadeObserver.observe(el));
+
+  // 4. 3D Tilt Effect for Gallery Cards
+  const cards = document.querySelectorAll('.tilt-card');
+  cards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      const rotateX = (y - centerY) / 15;
+      const rotateY = (centerX - x) / 15;
+      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale(1)';
+    });
+  });
+
+  // 5. Smooth Scroll for Anchor Links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
+    anchor.addEventListener('click', function(e) {
       e.preventDefault();
-      const targetId = this.getAttribute('href');
-      if (targetId === '#') return;
-      
-      const targetElement = document.querySelector(targetId);
-      if (targetElement) {
-        const navHeight = navbar ? navbar.offsetHeight : 0;
-        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navHeight;
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        const offset = window.innerWidth <= 768 ? 70 : 0;
+        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
         window.scrollTo({ top: targetPosition, behavior: 'smooth' });
       }
     });
   });
+
+  // 6. Horizontal Gallery Drag Scroll
+  const gallery = document.querySelector('.gallery-track');
+  let isDown = false, startX, scrollLeft;
+
+  if (gallery) {
+    gallery.addEventListener('mousedown', (e) => {
+      isDown = true; gallery.style.cursor = 'grabbing';
+      startX = e.pageX - gallery.offsetLeft; scrollLeft = gallery.scrollLeft;
+    });
+    gallery.addEventListener('mouseleave', () => { isDown = false; gallery.style.cursor = 'grab'; });
+    gallery.addEventListener('mouseup', () => { isDown = false; gallery.style.cursor = 'grab'; });
+    gallery.addEventListener('mousemove', (e) => {
+      if (!isDown) return; e.preventDefault();
+      const x = e.pageX - gallery.offsetLeft;
+      gallery.scrollLeft = scrollLeft - (x - startX) * 2;
+    });
+  }
 });
