@@ -2,17 +2,17 @@
    1. VARIABLES & RESET
    ========================================= */
 :root {
-  --bg-primary: #F9F8F4;
-  --bg-secondary: #F0EFE9;
-  --bg-alt: #EBE8E1;
-  --text-primary: #1C1C1C;
+  --bg-primary: #F7F5F0;
+  --bg-secondary: #EBE8E1;
+  --bg-alt: #E0DFDA;
+  --text-primary: #1A1A1A;
   --text-secondary: #6B6860;
-  --accent: #D4C5B0;
+  --accent: #C4B5A0;
   --accent-bold: #8C7B65;
-  --border: #E0DFDA;
+  --border: rgba(26, 26, 26, 0.1);
   
   --font-display: 'DM Serif Display', serif;
-  --font-body: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
   
   --transition-smooth: cubic-bezier(0.25, 0.46, 0.45, 0.94);
   --container-width: 1400px;
@@ -125,7 +125,7 @@ ul {
 .cursor-outline.hovered {
   width: 60px;
   height: 60px;
-  background-color: rgba(212, 197, 176, 0.2);
+  background-color: rgba(196, 181, 160, 0.2);
   border-color: var(--accent-bold);
 }
 
@@ -143,7 +143,7 @@ ul {
 }
 
 .nav-header.scrolled {
-  background-color: rgba(249, 248, 244, 0.9);
+  background-color: rgba(247, 245, 240, 0.9);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
 }
@@ -413,8 +413,9 @@ ul {
   position: absolute;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
   border: 1px solid var(--border);
+  background: #fff;
 }
 
 .mockup img {
@@ -422,6 +423,27 @@ ul {
   height: 100%;
   object-fit: cover;
 }
+
+.browser-bar {
+  height: 24px;
+  background: #f1f1f1;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  gap: 6px;
+  border-bottom: 1px solid var(--border);
+}
+
+.browser-bar span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ddd;
+}
+
+.browser-bar span:nth-child(1) { background: #ff5f56; }
+.browser-bar span:nth-child(2) { background: #ffbd2e; }
+.browser-bar span:nth-child(3) { background: #27c93f; }
 
 .mockup-1 {
   width: 70%;
@@ -492,7 +514,7 @@ ul {
 }
 
 /* =========================================
-   6. SELECTED WORK
+   6. SELECTED WORK (Asymmetric Grid)
    ========================================= */
 .work-section {
   padding: 8rem 0;
@@ -535,7 +557,7 @@ ul {
 .work-overlay {
   position: absolute;
   inset: 0;
-  background-color: rgba(28, 28, 28, 0.4);
+  background-color: rgba(26, 26, 26, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -584,28 +606,15 @@ ul {
   font-size: 1rem;
 }
 
-.work-item-large .work-image-wrapper {
-  aspect-ratio: 16/10;
-}
-
-.work-item .work-image-wrapper {
-  aspect-ratio: 4/5;
-}
-
-.work-item-wide .work-image-wrapper {
-  aspect-ratio: 16/9;
-}
-
+/* Asymmetric Layout for Desktop */
 @media (min-width: 768px) {
   .work-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(12, 1fr);
   }
-  .work-item-large {
-    grid-column: span 2;
-  }
-  .work-item-wide {
-    grid-column: span 2;
-  }
+  .work-item:nth-child(1) { grid-column: 1 / 9; } 
+  .work-item:nth-child(2) { grid-column: 9 / 13; margin-top: 8rem; } 
+  .work-item:nth-child(3) { grid-column: 1 / 6; margin-top: -4rem; } 
+  .work-item:nth-child(4) { grid-column: 6 / 13; } 
 }
 
 /* =========================================
@@ -771,9 +780,11 @@ ul {
   position: relative;
 }
 
-.about-visual img {
+.main-portrait {
   border-radius: 4px;
   width: 100%;
+  max-width: 500px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.05);
 }
 
 .about-collage {
@@ -786,6 +797,7 @@ ul {
   border-radius: 4px;
   overflow: hidden;
   display: none;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
 }
 
 .about-collage img {
