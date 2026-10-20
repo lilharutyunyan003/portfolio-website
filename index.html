@@ -3,129 +3,393 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Project Case Study by Lilit Harutyunyan.">
-  <title>Project Case Study | Lilit Harutyunyan</title>
+  <meta name="description" content="Lilit Harutyunyan — Shopify Web Designer & E-commerce Designer crafting visually compelling digital experiences and landing pages.">
+  <meta property="og:title" content="Lilit Harutyunyan | Shopify Web Designer">
+  <meta property="og:description" content="I turn ideas into digital experiences. Shopify stores, e-commerce experiences, and creative landing pages.">
+  <meta property="og:type" content="website">
+  <title>Lilit Harutyunyan | Shopify Web Designer</title>
   
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>LH</text></svg>">
 </head>
-<body class="case-study-body">
+<body>
 
+  <!-- Custom Cursor (Desktop Only) -->
   <div class="cursor-dot" aria-hidden="true"></div>
   <div class="cursor-outline" aria-hidden="true"></div>
 
+  <!-- Navigation -->
   <header class="nav-header" id="navbar">
     <div class="nav-container">
-      <a href="index.html" class="nav-logo magnetic-btn">LILIT HARUTYUNYAN</a>
-      <a href="index.html#work" class="back-link magnetic-btn">← BACK TO PORTFOLIO</a>
+      <a href="#home" class="nav-logo magnetic-btn">LILIT HARUTYUNYAN</a>
+      
+      <nav class="nav-links" aria-label="Main Navigation">
+        <a href="#home" class="magnetic-btn">Home</a>
+        <a href="#work" class="magnetic-btn">Work</a>
+        <a href="#about" class="magnetic-btn">About</a>
+        <a href="#services" class="magnetic-btn">Services</a>
+        <a href="#contact" class="magnetic-btn">Contact</a>
+      </nav>
+
+      <div class="nav-status">
+        <span class="status-dot"></span>
+        <span class="status-text">AVAILABLE FOR FREELANCE</span>
+      </div>
+
+      <button class="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </header>
 
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#home" class="mobile-link">Home</a>
+    <a href="#work" class="mobile-link">Work</a>
+    <a href="#about" class="mobile-link">About</a>
+    <a href="#services" class="mobile-link">Services</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+  </div>
+
   <main>
-    <!-- Case Study Hero -->
-    <section class="cs-hero">
+    <!-- SECTION 2: HERO EXPERIENCE -->
+    <section id="home" class="hero-section">
+      <div class="hero-container">
+        <div class="hero-content">
+          <span class="hero-label reveal">INDEPENDENT DIGITAL DESIGNER</span>
+          <h1 class="hero-title">
+            <span class="hero-line reveal">Hi, I'm Lilit.</span>
+            <span class="hero-line reveal">I build digital experiences</span>
+            <span class="hero-line reveal">that make <em>brands stand out.</em></span>
+          </h1>
+          <p class="hero-description reveal">
+            I design and build visually compelling Shopify stores and landing pages that combine thoughtful design, smooth interactions, and engaging shopping experiences.
+          </p>
+          <div class="hero-ctas reveal">
+            <a href="#work" class="btn btn-primary magnetic-btn">EXPLORE MY WORK</a>
+            <a href="#contact" class="btn btn-secondary magnetic-btn">LET'S TALK</a>
+          </div>
+        </div>
+
+        <div class="hero-visuals">
+          <!-- CSS Browser Mockups with Replaceable Images -->
+          <div class="mockup mockup-1 parallax-element" data-speed="0.05">
+            <div class="browser-bar"><span></span><span></span><span></span></div>
+            <!-- REPLACE WITH: Liora Care or LiVA Travel Screenshot -->
+            <img src="https://placehold.co/600x400/F0EFE9/1C1C1C?text=LiVA+Travel+Homepage" alt="LiVA Travel Desktop Mockup">
+          </div>
+          <div class="mockup mockup-2 parallax-element" data-speed="0.08">
+            <div class="browser-bar"><span></span><span></span><span></span></div>
+            <!-- REPLACE WITH: Wedding Invitation Mobile Screenshot -->
+            <img src="https://placehold.co/300x500/1C1C1C/F0EFE9?text=Wedding+Invitation+Mobile" alt="Wedding Invitation Mobile Mockup">
+          </div>
+          <div class="mockup mockup-3 parallax-element" data-speed="0.03">
+            <div class="browser-bar"><span></span><span></span><span></span></div>
+            <!-- REPLACE WITH: Thermal Printer or English Course Screenshot -->
+            <img src="https://placehold.co/400x300/D4C5B0/1C1C1C?text=Product+Landing+Page" alt="Product Landing Page Mockup">
+          </div>
+        </div>
+      </div>
+      
+      <div class="scroll-indicator">
+        <span>SCROLL</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: SELECTED WORK -->
+    <section id="work" class="work-section">
       <div class="container">
-        <span class="cs-category reveal">Web Design / UI/UX / [Update Category]</span>
-        <h1 class="cs-title reveal">[PROJECT NAME]</h1>
-        <p class="cs-subtitle reveal">A brief, compelling one-sentence summary of what this project achieved and the core problem it solved.</p>
+        <div class="section-header reveal">
+          <h2 class="section-title">SELECTED WORK</h2>
+          <p class="section-subtitle">A collection of digital experiences built with curiosity, creativity, and attention to detail.</p>
+        </div>
+
+        <div class="work-grid">
+          <!-- Project 01: Liora Care -->
+          <article class="work-item reveal">
+            <a href="project.html" class="work-link magnetic-btn">
+              <div class="work-image-wrapper">
+                <!-- REPLACE WITH: Liora Care Homepage Screenshot -->
+                <img src="https://placehold.co/1000x700/F5F5F0/1C1C1C?text=Liora+Care+Shopify+Store" alt="Liora Care Shopify Store Homepage">
+                <div class="work-overlay">
+                  <span class="view-project">VIEW CASE STUDY</span>
+                </div>
+              </div>
+              <div class="work-info">
+                <span class="work-category">Shopify Store Design / Beauty & Self-Care</span>
+                <h3 class="work-title">LIORA CARE</h3>
+                <p class="work-desc">A beauty and self-care e-commerce concept designed around simplicity, warmth, and an elevated shopping experience.</p>
+              </div>
+            </a>
+          </article>
+
+          <!-- Project 02: LiVA Travel -->
+          <article class="work-item reveal">
+            <a href="https://lilharutyunyan003.github.io/LiVA--travel/" target="_blank" rel="noopener" class="work-link magnetic-btn">
+              <div class="work-image-wrapper">
+                <!-- REPLACE WITH: LiVA Travel Screenshot -->
+                <img src="https://placehold.co/600x800/E8E4DC/1C1C1C?text=LiVA+Travel+Website" alt="LiVA Travel Website">
+                <div class="work-overlay">
+                  <span class="view-project">VIEW LIVE PROJECT ↗</span>
+                </div>
+              </div>
+              <div class="work-info">
+                <span class="work-category">Web Design / UI/UX / Travel & Tourism</span>
+                <h3 class="work-title">LIVA TRAVEL</h3>
+                <p class="work-desc">A premium travel agency website featuring intuitive booking flows and elegant destination showcases.</p>
+              </div>
+            </a>
+          </article>
+
+          <!-- Project 03: Mini Thermal Printer -->
+          <article class="work-item reveal">
+            <a href="https://lilit-harutyunyan-0chbyehc.myshopify.com/pages/mini-thermal-printer" target="_blank" rel="noopener" class="work-link magnetic-btn">
+              <div class="work-image-wrapper">
+                <!-- REPLACE WITH: Thermal Printer Screenshot -->
+                <img src="https://placehold.co/600x800/2C3E2D/F0EFE9?text=Mini+Thermal+Printer+Landing+Page" alt="Mini Thermal Printer Landing Page">
+                <div class="work-overlay">
+                  <span class="view-project">VIEW LIVE PROJECT ↗</span>
+                </div>
+              </div>
+              <div class="work-info">
+                <span class="work-category">Product Landing Page / E-commerce / Custom Liquid</span>
+                <h3 class="work-title">MINI THERMAL PRINTER</h3>
+                <p class="work-desc">A conversion-focused product landing page with a bold visual hierarchy and strong purchase-driven CTAs.</p>
+              </div>
+            </a>
+          </article>
+
+          <!-- Project 04: Vardan & Lilit Wedding Invitation -->
+          <article class="work-item work-item-wide reveal">
+            <a href="https://lilharutyunyan003.github.io/VardanLilit-Wedding-Invitation/" target="_blank" rel="noopener" class="work-link magnetic-btn">
+              <div class="work-image-wrapper">
+                <!-- REPLACE WITH: Wedding Invitation Screenshot -->
+                <img src="https://placehold.co/1200x600/D4C5B0/1C1C1C?text=Vardan+%26+Lilit+Wedding+Invitation" alt="Vardan and Lilit Wedding Invitation">
+                <div class="work-overlay">
+                  <span class="view-project">VIEW LIVE PROJECT ↗</span>
+                </div>
+              </div>
+              <div class="work-info">
+                <span class="work-category">Interactive Web Experience / Event Design</span>
+                <h3 class="work-title">VARDAN & LILIT</h3>
+                <p class="work-desc">A romantic, interactive digital wedding invitation featuring a live countdown timer, detailed event timeline, and RSVP functionality.</p>
+              </div>
+            </a>
+          </article>
+        </div>
         
-        <!-- REPLACE WITH: Full-width hero screenshot of the project -->
-        <div class="cs-hero-image reveal">
-          <img src="https://placehold.co/1400x800/F5F5F0/1C1C1C?text=Project+Hero+Screenshot" alt="Project Hero Screenshot">
-        </div>
+        <p class="work-note reveal" style="text-align: center; margin-top: 4rem; font-size: 0.875rem; color: var(--text-secondary); font-style: italic;">
+          * Note: Some Shopify project links may require a store password. Contact me for access or to view high-resolution screenshots.
+        </p>
       </div>
     </section>
 
-    <!-- Project Overview -->
-    <section class="cs-section">
-      <div class="container cs-grid">
-        <div class="cs-meta reveal">
-          <h3>Project Overview</h3>
-          <p>Describe the background of the project. What was the goal? Who was the target audience? Keep it concise but informative.</p>
-        </div>
-        <div class="cs-details reveal">
-          <div class="detail-item">
-            <span class="detail-label">Live Project</span>
-            <a href="#" target="_blank" rel="noopener">View Live Site ↗</a>
-          </div>
-          <div class="detail-item">
-            <span class="detail-label">Role</span>
-            <span>UI/UX Design, Front-End Development</span>
-          </div>
-          <div class="detail-item">
-            <span class="detail-label">Tools</span>
-            <span>HTML, CSS, JavaScript, Shopify, GitHub</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Creative Direction -->
-    <section class="cs-section cs-bg-alt">
+    <!-- SECTION 4: INTERACTIVE PROJECT SHOWCASE -->
+    <section class="showcase-section">
       <div class="container">
-        <h2 class="cs-heading reveal">Creative Direction</h2>
-        <div class="cs-content reveal">
-          <p>Explain the visual choices. Mention the color palette, typography choices, and how the design supports the brand's identity and user goals.</p>
+        <div class="section-header reveal">
+          <h2 class="section-title">IMMERSIVE PREVIEWS</h2>
+          <p class="section-subtitle">Drag or scroll to explore detailed interactions and responsive layouts.</p>
+        </div>
+      </div>
+      
+      <div class="horizontal-scroll-wrapper">
+        <div class="horizontal-scroll">
+          <!-- REPLACE WITH: Detailed crop screenshots of your actual work -->
+          <div class="scroll-item reveal">
+            <img src="https://placehold.co/600x800/E8E4DC/1C1C1C?text=LiVA+Travel+Booking+UI" alt="LiVA Travel Booking UI Detail">
+          </div>
+          <div class="scroll-item reveal">
+            <img src="https://placehold.co/600x800/F5F5F0/1C1C1C?text=Wedding+Countdown+Timer" alt="Wedding Invitation Countdown Detail">
+          </div>
+          <div class="scroll-item reveal">
+            <img src="https://placehold.co/600x800/D4C5B0/1C1C1C?text=Online+English+Course+Layout" alt="Online English Course Layout">
+          </div>
+          <div class="scroll-item reveal">
+            <img src="https://placehold.co/600x800/2C3E2D/F0EFE9?text=Printer+Feature+Breakdown" alt="Thermal Printer Feature Section">
+          </div>
+          <div class="scroll-item reveal">
+            <img src="https://placehold.co/600x800/E0DFDA/1C1C1C?text=Liora+Care+Product+Cards" alt="Liora Care Product Cards">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: CREATIVE PROCESS -->
+    <section class="process-section">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 class="section-title">GOOD DESIGN IS MORE THAN HOW IT LOOKS.</h2>
         </div>
         
-        <div class="cs-showcase-grid">
-          <!-- REPLACE WITH: Detail shots, color palette, or typography examples -->
-          <div class="cs-image reveal">
-            <img src="https://placehold.co/600x400/E8E4DC/1C1C1C?text=Design+System+%26+Colors" alt="Design System and Colors">
+        <div class="process-timeline">
+          <div class="process-step reveal">
+            <span class="step-number">01</span>
+            <h3 class="step-title">DISCOVER</h3>
+            <p class="step-desc">Understanding the brand, audience, product, and business goals to establish a strong foundation.</p>
           </div>
-          <div class="cs-image reveal">
-            <img src="https://placehold.co/600x400/D4C5B0/1C1C1C?text=UI+Components+%26+Details" alt="UI Components and Details">
+          <div class="process-step reveal">
+            <span class="step-number">02</span>
+            <h3 class="step-title">DESIGN</h3>
+            <p class="step-desc">Building the visual direction, layout, typography, and user experience with intentional detail.</p>
+          </div>
+          <div class="process-step reveal">
+            <span class="step-number">03</span>
+            <h3 class="step-title">DEVELOP</h3>
+            <p class="step-desc">Translating the design into a responsive, functional Shopify storefront or landing page.</p>
+          </div>
+          <div class="process-step reveal">
+            <span class="step-number">04</span>
+            <h3 class="step-title">REFINE</h3>
+            <p class="step-desc">Testing interactions, improving responsiveness, and polishing the final experience for launch.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Key Features Showcase -->
-    <section class="cs-section">
-      <div class="container">
-        <h2 class="cs-heading reveal">Key Features & Solutions</h2>
-        <p class="cs-text reveal">Highlight 2-3 specific design or development challenges you solved in this project (e.g., responsive booking flow, interactive countdown, custom Liquid sections).</p>
+    <!-- SECTION 6: ABOUT ME -->
+    <section id="about" class="about-section">
+      <div class="container about-container">
+        <div class="about-visual reveal">
+          <!-- YOUR PROVIDED PHOTO -->
+          <img src="https://cdn.shopify.com/s/files/1/0771/6290/5791/files/photo_2026-10-20_23-18-32.jpg?v=1792523977" alt="Lilit Harutyunyan Portrait" class="main-portrait">
+          <div class="about-collage">
+            <!-- REPLACE WITH: Small detail shot of your work or a design tool icon -->
+            <img src="https://placehold.co/200x200/D4C5B0/1C1C1C?text=UI+Detail" alt="Design Detail">
+          </div>
+        </div>
         
-        <!-- REPLACE WITH: Specific feature screenshots -->
-        <div class="cs-full-image reveal">
-          <img src="https://placehold.co/1200x900/F0EFE9/1C1C1C?text=Key+Feature+Screenshot" alt="Key Feature Screenshot">
+        <div class="about-content reveal">
+          <h2 class="section-title">Designing with intention.<br>Building with curiosity.</h2>
+          <p class="about-text">
+            I'm Lilit, a passionate Shopify web designer and UI/UX creator focused on building distinctive digital experiences. I enjoy exploring visual storytelling, crafting thoughtful e-commerce layouts, experimenting with animation, and transforming ideas into websites that feel polished and intuitive.
+          </p>
+          <p class="about-text">
+            My focus is on responsive websites and landing pages that not only look beautiful but also guide users seamlessly toward their goals. I believe in the power of whitespace, intentional typography, and micro-interactions to elevate a brand's digital presence.
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- Outcome & Reflection -->
-    <section class="cs-section cs-bg-alt">
-      <div class="container cs-grid">
-        <div class="cs-meta reveal">
-          <h3>Outcome & Reflection</h3>
-        </div>
-        <div class="cs-details reveal">
-          <p>What did you learn from this project? How did it improve your skills in Shopify, UI/UX, or front-end development? Keep it authentic and growth-oriented.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Next Project -->
-    <section class="cs-next reveal">
+    <!-- SECTION 7: SERVICES -->
+    <section id="services" class="services-section">
       <div class="container">
-        <a href="index.html#work" class="next-project-link magnetic-btn">
-          <span class="next-label">NEXT PROJECT</span>
-          <h2 class="next-title">Explore More Work →</h2>
-        </a>
+        <div class="section-header reveal">
+          <h2 class="section-title">HOW I CAN HELP</h2>
+        </div>
+        
+        <div class="services-grid">
+          <div class="service-card reveal">
+            <span class="service-number">01</span>
+            <h3 class="service-title">SHOPIFY STORE DESIGN</h3>
+            <p class="service-desc">Designing visually cohesive Shopify storefronts with clear navigation and thoughtful product presentation.</p>
+          </div>
+          <div class="service-card reveal">
+            <span class="service-number">02</span>
+            <h3 class="service-title">CUSTOM LANDING PAGES</h3>
+            <p class="service-desc">Creating product-focused landing pages with engaging layouts, strong visual hierarchy, and clear calls to action.</p>
+          </div>
+          <div class="service-card reveal">
+            <span class="service-number">03</span>
+            <h3 class="service-title">THEME CUSTOMIZATION</h3>
+            <p class="service-desc">Customizing Shopify themes and building tailored sections with Liquid, CSS, HTML, and JavaScript where appropriate.</p>
+          </div>
+          <div class="service-card reveal">
+            <span class="service-number">04</span>
+            <h3 class="service-title">RESPONSIVE DESIGN</h3>
+            <p class="service-desc">Adapting storefronts and landing pages flawlessly for desktop, tablet, and mobile devices.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8: TOOLS AND SKILLS -->
+    <section class="skills-section">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 class="section-title">TOOLS & EXPERTISE</h2>
+        </div>
+        
+        <div class="skills-grid reveal">
+          <div class="skill-category">
+            <h4 class="skill-heading">PLATFORMS</h4>
+            <ul class="skill-list">
+              <li>Shopify</li>
+              <li>Shopify Theme Editor</li>
+              <li>GitHub Pages</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h4 class="skill-heading">DEVELOPMENT</h4>
+            <ul class="skill-list">
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>JavaScript (Vanilla)</li>
+              <li>Liquid</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h4 class="skill-heading">DESIGN</h4>
+            <ul class="skill-list">
+              <li>UI/UX Design</li>
+              <li>E-commerce Layout Design</li>
+              <li>Landing Page Design</li>
+              <li>Visual Storytelling</li>
+              <li>Responsive Web Design</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 9: CONTACT -->
+    <section id="contact" class="contact-section">
+      <div class="container contact-container">
+        <div class="contact-content reveal">
+          <h2 class="contact-title">HAVE A GOOD IDEA?<br>LET'S BUILD IT.</h2>
+          <p class="contact-subtitle">Have a Shopify store or landing-page idea? Let's turn it into a thoughtful digital experience.</p>
+          
+          <div class="contact-actions">
+            <!-- REPLACE WITH: Your actual email address -->
+            <a href="mailto:your.email@example.com?subject=Project%20Inquiry%20from%20Portfolio" class="btn btn-primary magnetic-btn">START A PROJECT</a>
+            <a href="#home" class="btn btn-text magnetic-btn">BACK TO TOP ↑</a>
+          </div>
+
+          <div class="social-links">
+            <!-- REPLACE WITH: Your actual social media URLs -->
+            <a href="https://github.com/lilharutyunyan003" target="_blank" rel="noopener" class="social-link magnetic-btn">GitHub</a>
+            <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener" class="social-link magnetic-btn">LinkedIn</a>
+            <a href="https://instagram.com/yourprofile" target="_blank" rel="noopener" class="social-link magnetic-btn">Instagram</a>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
+  <!-- SECTION 10: FOOTER -->
   <footer class="footer">
     <div class="container footer-container">
       <div class="footer-brand">
         <span class="footer-logo">LILIT HARUTYUNYAN</span>
+        <span class="footer-tagline">Shopify Web Designer & Digital Creator</span>
       </div>
+      
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+
       <div class="footer-bottom">
-        <p>&copy; <span id="current-year"></span> Lilit Harutyunyan.</p>
+        <p>&copy; <span id="current-year"></span> Lilit Harutyunyan. All rights reserved.</p>
         <p class="footer-signature">DESIGNED WITH CURIOSITY.</p>
       </div>
     </div>
