@@ -3,217 +3,316 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Lilit Harutyunyan — Shopify Web Designer & Digital Creator crafting visually compelling, editorial digital experiences.">
-  <title>Lilit Harutyunyan | Digital Designer</title>
+  <meta name="description" content="Lilit Harutyunyan — Shopify Web Designer & E-commerce Developer">
+  <title>Lilit Harutyunyan | Shopify Web Designer</title>
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 font-family=%22serif%22>L</text></svg>">
 </head>
 <body>
 
-  <div class="cursor-dot" aria-hidden="true"></div>
-  <div class="cursor-outline" aria-hidden="true"></div>
+  <!-- Background Effects -->
+  <div class="bg-gradient"></div>
+  <div class="noise-overlay"></div>
 
-  <header class="nav-header" id="navbar">
-    <div class="nav-container">
-      <a href="#home" class="nav-logo magnetic">LILIT HARUTYUNYAN</a>
-      
-      <nav class="nav-links">
-        <a href="#work" class="magnetic">Work</a>
-        <a href="#about" class="magnetic">About</a>
-        <a href="#contact" class="magnetic">Contact</a>
-      </nav>
-
-      <div class="nav-status">
-        <span class="status-dot"></span>
-        <span>Available for Freelance</span>
-      </div>
-
-      <button class="mobile-menu-btn" aria-label="Toggle menu">
-        <span></span>
-        <span></span>
-      </button>
-    </div>
+  <!-- Mobile Header -->
+  <header class="mobile-header">
+    <div class="mobile-logo">LH</div>
+    <button class="mobile-menu-btn" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
   </header>
 
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="#home" class="mobile-link">Home</a>
-    <a href="#work" class="mobile-link">Work</a>
-    <a href="#about" class="mobile-link">About</a>
-    <a href="#contact" class="mobile-link">Contact</a>
-  </div>
+  <!-- Mobile Nav -->
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="#about" class="mobile-link">01. About</a>
+    <a href="#experience" class="mobile-link">02. Experience</a>
+    <a href="#projects" class="mobile-link">03. Projects</a>
+    <a href="#pricing" class="mobile-link">04. Pricing</a>
+    <a href="#contact" class="mobile-link">05. Contact</a>
+  </nav>
 
-  <main>
-    <!-- HERO SECTION -->
-    <section id="home" class="hero-section">
-      <div class="hero-container">
-        <div class="hero-text">
-          <p class="hero-label reveal-text">Shopify Web Designer & Digital Creator</p>
-          <h1 class="hero-title reveal-text">
-            I build digital<br>
-            experiences that<br>
-            <em>make brands stand out.</em>
-          </h1>
-          <div class="hero-cta reveal-text">
-            <a href="#work" class="btn-outline magnetic">Explore Work</a>
-          </div>
-        </div>
+  <div class="main-container">
+    <!-- Left Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-inner">
+        <h1 class="name">Lilit<br><span class="highlight">Harutyunyan</span></h1>
+        <p class="title">Shopify Web Designer & E-commerce Developer</p>
         
-        <div class="hero-visual reveal-image">
-          <img src="https://cdn.shopify.com/s/files/1/0771/6290/5791/files/Portfolio_2026.jpg?v=1792525326" alt="Lilit Harutyunyan Portfolio Hero">
+        <p class="bio">
+          I create thoughtful Shopify storefronts and product landing pages that combine clean design, intuitive UX, and attention to detail.
+        </p>
+
+        <nav class="nav-menu">
+          <a href="#about" class="nav-item active"><span class="num">01.</span> About</a>
+          <a href="#experience" class="nav-item"><span class="num">02.</span> Experience</a>
+          <a href="#projects" class="nav-item"><span class="num">03.</span> Projects</a>
+          <a href="#pricing" class="nav-item"><span class="num">04.</span> Pricing</a>
+          <a href="#contact" class="nav-item"><span class="num">05.</span> Contact</a>
+        </nav>
+
+        <div class="socials">
+          <a href="https://github.com/lilharutyunyan003" target="_blank" aria-label="GitHub">GH</a>
+          <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn">LI</a>
+          <a href="mailto:your.email@example.com" aria-label="Email">@</a>
         </div>
       </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
       
-      <div class="scroll-indicator">
-        <span>Scroll</span>
-        <div class="scroll-line"></div>
-      </div>
-    </section>
-
-    <!-- WORK SECTION -->
-    <section id="work" class="work-section">
-      <div class="container">
-        <div class="section-header reveal-text">
-          <h2 class="section-title">Selected Work</h2>
-          <p class="section-subtitle">A curated collection of digital experiences, Shopify stores, and landing pages.</p>
-        </div>
-
-        <div class="editorial-grid">
-          <!-- Project 01: Liora Care -->
-          <article class="grid-item item-large reveal-image">
-            <a href="project.html" class="project-link magnetic">
-              <div class="image-wrapper">
-                <img src="https://cdn.shopify.com/s/files/1/0771/6290/5791/files/8aee914746ab92629f44e7591333e89d.jpg?v=1792051137" alt="Liora Care Shopify Store">
-                <div class="project-overlay">
-                  <span class="view-text">View Case Study</span>
-                </div>
-              </div>
-              <div class="project-meta">
-                <span class="project-category">Shopify Store Design</span>
-                <h3 class="project-name">Liora Care</h3>
-              </div>
-            </a>
-          </article>
-
-          <!-- Project 02: LiVA Travel -->
-          <article class="grid-item reveal-image">
-            <a href="https://lilharutyunyan003.github.io/LiVA--travel/" target="_blank" class="project-link magnetic">
-              <div class="image-wrapper">
-                <img src="https://cdn.shopify.com/s/files/1/0771/6290/5791/files/photo_2026-10-16_21-24-25.jpg?v=1792171735" alt="LiVA Travel Website">
-                <div class="project-overlay">
-                  <span class="view-text">View Live ↗</span>
-                </div>
-              </div>
-              <div class="project-meta">
-                <span class="project-category">Web Design / UI/UX</span>
-                <h3 class="project-name">LiVA Travel</h3>
-              </div>
-            </a>
-          </article>
-
-          <!-- Project 03: Digital Planner -->
-          <article class="grid-item reveal-image">
-            <a href="https://lilit-harutyunyan-0chbyehc.myshopify.com/" target="_blank" class="project-link magnetic">
-              <div class="image-wrapper">
-                <img src="https://cdn.shopify.com/s/files/1/0771/6290/5791/files/Goodnotes_Yearly_Planner_For_Easy_Organization_in_2026-2027.jpg?v=1792486503" alt="Digital Planner Landing Page">
-                <div class="project-overlay">
-                  <span class="view-text">View Project ↗</span>
-                </div>
-              </div>
-              <div class="project-meta">
-                <span class="project-category">Digital Product / Landing Page</span>
-                <h3 class="project-name">Digital Planner</h3>
-              </div>
-            </a>
-          </article>
-
-          <!-- Project 04: Thermal Printer -->
-          <article class="grid-item item-wide reveal-image">
-            <a href="https://lilit-harutyunyan-0chbyehc.myshopify.com/pages/mini-thermal-printer" target="_blank" class="project-link magnetic">
-              <div class="image-wrapper">
-                <img src="https://cdn.shopify.com/s/files/1/0771/6290/5791/files/71692nzTPOL._AC_SX466.jpg?v=1791888631" alt="Mini Thermal Printer Landing Page">
-                <div class="project-overlay">
-                  <span class="view-text">View Live ↗</span>
-                </div>
-              </div>
-              <div class="project-meta">
-                <span class="project-category">Product Landing Page / Custom Liquid</span>
-                <h3 class="project-name">Mini Thermal Printer</h3>
-              </div>
-            </a>
-          </article>
-        </div>
-        
-        <p class="work-note reveal-text">* Some Shopify links may require a store password. Contact me for access.</p>
-      </div>
-    </section>
-
-    <!-- ABOUT SECTION (Text Left, Small Photo Right) -->
-    <section id="about" class="about-section">
-      <div class="container about-container">
-        
-        <div class="about-content reveal-text">
-          <h2 class="section-title">Designing with intention.<br>Building with<br><em>curiosity.</em></h2>
-          <p class="about-text">
-            I'm Lilit, a Shopify web designer and digital creator passionate about crafting distinctive, editorial-quality digital experiences. I blend strong visual storytelling with deliberate composition, producing websites that feel intentional, bold, and highly functional.
-          </p>
-          <p class="about-text">
-            My focus lies in responsive e-commerce layouts, custom landing pages, and smooth micro-interactions that elevate a brand's digital presence and guide users seamlessly toward their goals.
-          </p>
+      <!-- 01. About Section -->
+      <section id="about" class="section fade-in">
+        <h2 class="section-title"><span class="num">01.</span> About Me</h2>
+        <div class="about-content">
+          <p>Hi, I'm Lilit. I'm passionate about building thoughtful digital experiences for e-commerce brands. My work focuses on <a href="#projects" class="link">Shopify storefront design</a>, product landing pages, responsive layouts, and custom theme sections.</p>
+          <p>I enjoy combining visual design with practical functionality to create websites that feel intuitive, polished, and purposeful.</p>
           
-          <div class="skills-list">
-            <span>Shopify</span>
-            <span>Liquid</span>
-            <span>HTML/CSS</span>
-            <span>JavaScript</span>
-            <span>UI/UX Design</span>
-            <span>Visual Storytelling</span>
+          <ul class="skills">
+            <li>Shopify Development</li>
+            <li>Liquid Templating</li>
+            <li>UI/UX Design</li>
+            <li>Responsive Design</li>
+            <li>JavaScript</li>
+            <li>Brand Storytelling</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 02. Experience Section -->
+      <section id="experience" class="section fade-in">
+        <h2 class="section-title"><span class="num">02.</span> Experience</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <h3 class="role">Shopify Web Designer <span class="company">/ Portfolio Projects</span></h3>
+            <p class="desc">Designing and developing Shopify storefront concepts, product landing pages, and customized theme sections with responsive layouts and Liquid customization.</p>
+            <div class="tags"><span>Shopify</span><span>Liquid</span><span>HTML/CSS</span><span>JavaScript</span></div>
+          </div>
+          <div class="timeline-item">
+            <h3 class="role">E-commerce Design <span class="company">/ Liora Care</span></h3>
+            <p class="desc">Developing a beauty and self-care Shopify store with warm visual identity, thoughtful product presentation, and cohesive shopping experience.</p>
+            <div class="tags"><span>Shopify</span><span>Theme Design</span><span>E-commerce UX</span></div>
+          </div>
+          <div class="timeline-item">
+            <h3 class="role">Landing Page Design <span class="company">/ NIIMBOT B21</span></h3>
+            <p class="desc">Product-focused landing page for Bluetooth thermal label printer with deep-green visual direction and responsive layouts.</p>
+            <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 03. Selected Projects (Linked Directly) -->
+      <section id="projects" class="section fade-in">
+        <h2 class="section-title"><span class="num">03.</span> Selected Projects</h2>
+        <p class="section-subtitle">Click any project below to visit the live site.</p>
+        
+        <div class="horizontal-gallery">
+          <div class="gallery-track">
+            
+            <!-- Project 1: Liora Care -->
+            <a href="https://lilit-harutyunyan-0chbyehc.myshopify.com/" target="_blank" class="gallery-card tilt-card">
+              <div class="card-image">
+                <img src="https://cdn.shopify.com/s/files/1/0771/6290/5791/files/00J_e608Td0y6rBDu0WFX_10DvO9AzCIhOsfPyUpf7fXMj3CEhdRhqS1h2VPNdcOtPbFSMRbS1w1urDZ3ZqBF4a3nCV0Vg86WU_kdEFJsKtfIfdFFCSF6fz3XzrOUlmM7gIHPVmLUuKHQ7ZVtCiWF3foM_0oayMaVTyMUn3cVtREcWKRz6_NOhN_2f76442c-94b9-4516-b8ff-fd5125ae9484.jpg?v=1791888523" alt="Liora Care">
+                <div class="card-overlay">
+                  <span class="card-link">Visit Live Site ↗</span>
+                </div>
+              </div>
+              <div class="card-info">
+                <h3>Liora Care</h3>
+                <p>Shopify Store Design</p>
+              </div>
+            </a>
+
+            <!-- Project 2: LiVA Travel -->
+            <a href="https://lilharutyunyan003.github.io/LiVA--travel/" target="_blank" class="gallery-card tilt-card">
+              <div class="card-image">
+                <img src="https://cdn.shopify.com/s/files/1/0771/6290/5791/files/download_1_d89d17af-b7dc-4f40-a952-93ed181b2a6c.jpg?v=1792256770" alt="LiVA Travel">
+                <div class="card-overlay">
+                  <span class="card-link">Visit Live Site ↗</span>
+                </div>
+              </div>
+              <div class="card-info">
+                <h3>LiVA Travel</h3>
+                <p>Travel Website / UI/UX</p>
+              </div>
+            </a>
+
+            <!-- Project 3: Mini Thermal Printer -->
+            <a href="https://lilit-harutyunyan-0chbyehc.myshopify.com/pages/mini-thermal-printer" target="_blank" class="gallery-card tilt-card">
+              <div class="card-image">
+                <img src="https://cdn.shopify.com/s/files/1/0771/6290/5791/files/cc463fe47f75fcd626a506fcd74180eb.jpg?v=1791888619" alt="Mini Thermal Printer">
+                <div class="card-overlay">
+                  <span class="card-link">Visit Live Site ↗</span>
+                </div>
+              </div>
+              <div class="card-info">
+                <h3>Mini Thermal Printer</h3>
+                <p>Product Landing Page</p>
+              </div>
+            </a>
+
+            <!-- Project 4: Online English Course -->
+            <a href="https://lilit-harutyunyan-0chbyehc.myshopify.com/pages/online-english-course" target="_blank" class="gallery-card tilt-card">
+              <div class="card-image">
+                <img src="https://cdn.shopify.com/s/files/1/0771/6290/5791/files/ling-app-J4UFLkp29iE-unsplash.jpg?v=1792050986" alt="Online English Course">
+                <div class="card-overlay">
+                  <span class="card-link">Visit Live Site ↗</span>
+                </div>
+              </div>
+              <div class="card-info">
+                <h3>Online English Course</h3>
+                <p>Digital Product / Education</p>
+              </div>
+            </a>
+
+            <!-- Project 5: Wedding Invitation -->
+            <a href="https://lilharutyunyan003.github.io/VardanLilit-Wedding-Invitation/" target="_blank" class="gallery-card tilt-card">
+              <div class="card-image">
+                <img src="https://cdn.shopify.com/s/files/1/0771/6290/5791/files/photo_2026-10-16_21-23-34.jpg?v=1792171735" alt="Wedding Invitation">
+                <div class="card-overlay">
+                  <span class="card-link">Visit Live Site ↗</span>
+                </div>
+              </div>
+              <div class="card-info">
+                <h3>Vardan & Lilit</h3>
+                <p>Interactive Web Experience</p>
+              </div>
+            </a>
+
           </div>
         </div>
 
-        <div class="about-visual reveal-image">
-          <img src="https://cdn.shopify.com/s/files/1/0771/6290/5791/files/photo_2026-10-20_23-18-32.jpg?v=1792523977" alt="Lilit Harutyunyan" class="portrait">
-        </div>
-
-      </div>
-    </section>
-
-    <!-- CONTACT SECTION -->
-    <section id="contact" class="contact-section">
-      <div class="container">
-        <div class="contact-content reveal-text">
-          <p class="contact-label">Got a project in mind?</p>
-          <h2 class="contact-title">Let's build something<br><em>extraordinary</em> together.</h2>
-          
-          <a href="mailto:your.email@example.com?subject=Project%20Inquiry" class="btn-large magnetic">Start a Project</a>
-          
-          <div class="social-links">
-            <a href="https://github.com/lilharutyunyan003" target="_blank" class="magnetic">GitHub</a>
-            <a href="https://linkedin.com/in/yourprofile" target="_blank" class="magnetic">LinkedIn</a>
-            <a href="https://instagram.com/yourprofile" target="_blank" class="magnetic">Instagram</a>
+        <!-- Running Text Line -->
+        <div class="running-text">
+          <div class="running-track">
+            <span>Shopify Development</span><span class="divider">✦</span>
+            <span>E-commerce Design</span><span class="divider">✦</span>
+            <span>Landing Pages</span><span class="divider">✦</span>
+            <span>UI/UX Design</span><span class="divider">✦</span>
+            <span>Responsive Design</span><span class="divider">✦</span>
+            <span>Liquid Customization</span><span class="divider">✦</span>
+            <span>Brand Storytelling</span><span class="divider">✦</span>
+            <!-- Duplicate for seamless loop -->
+            <span>Shopify Development</span><span class="divider">✦</span>
+            <span>E-commerce Design</span><span class="divider">✦</span>
+            <span>Landing Pages</span><span class="divider">✦</span>
+            <span>UI/UX Design</span><span class="divider">✦</span>
+            <span>Responsive Design</span><span class="divider">✦</span>
+            <span>Liquid Customization</span><span class="divider">✦</span>
+            <span>Brand Storytelling</span><span class="divider">✦</span>
           </div>
         </div>
-      </div>
-    </section>
-  </main>
+      </section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container footer-container">
-      <div class="footer-left">
-        <span class="footer-logo">LILIT HARUTYUNYAN</span>
-        <span class="footer-tagline">Shopify Web Designer & Digital Creator</span>
-      </div>
-      <div class="footer-right">
-        <p>&copy; <span id="current-year"></span> All rights reserved.</p>
-        <p class="footer-signature">Designed with curiosity.</p>
-      </div>
-    </div>
-  </footer>
+      <!-- 04. Services & Pricing (NEW) -->
+      <section id="pricing" class="section fade-in">
+        <h2 class="section-title"><span class="num">04.</span> Services & Pricing</h2>
+        <p class="section-subtitle">Transparent investment for exceptional digital experiences.</p>
+        
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <h3>Landing Page</h3>
+              <div class="price">From $600</div>
+            </div>
+            <ul class="pricing-features">
+              <li>✓ High-converting layout</li>
+              <li>✓ Custom animations & interactions</li>
+              <li>✓ Mobile-optimized responsive design</li>
+              <li>✓ Contact form integration</li>
+              <li>✓ 1-2 weeks delivery</li>
+            </ul>
+            <a href="#contact" class="pricing-btn">Get Started</a>
+          </div>
+
+          <div class="pricing-card featured">
+            <div class="featured-badge">Most Popular</div>
+            <div class="pricing-header">
+              <h3>Shopify Store Setup</h3>
+              <div class="price">From $1,200</div>
+            </div>
+            <ul class="pricing-features">
+              <li>✓ Custom theme selection & setup</li>
+              <li>✓ Up to 15 products configured</li>
+              <li>✓ Payment & shipping gateway setup</li>
+              <li>✓ Basic SEO & speed optimization</li>
+              <li>✓ 2-3 weeks delivery</li>
+            </ul>
+            <a href="#contact" class="pricing-btn">Get Started</a>
+          </div>
+
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <h3>Custom E-commerce</h3>
+              <div class="price">From $2,500</div>
+            </div>
+            <ul class="pricing-features">
+              <li>✓ Fully custom UI/UX design</li>
+              <li>✓ Advanced Liquid section development</li>
+              <li>✓ Complex product variants & apps</li>
+              <li>✓ Comprehensive speed & SEO optimization</li>
+              <li>✓ 4-6 weeks delivery</li>
+            </ul>
+            <a href="#contact" class="pricing-btn">Get Started</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 05. My Process (NEW) -->
+      <section class="section fade-in">
+        <h2 class="section-title"><span class="num">05.</span> My Process</h2>
+        <div class="process-grid">
+          <div class="process-step">
+            <span class="step-num">01</span>
+            <h3>Discover</h3>
+            <p>Understanding your brand, target audience, and business goals to build a strong strategic foundation.</p>
+          </div>
+          <div class="process-step">
+            <span class="step-num">02</span>
+            <h3>Design</h3>
+            <p>Crafting the visual direction, layout, typography, and user experience with deliberate, editorial detail.</p>
+          </div>
+          <div class="process-step">
+            <span class="step-num">03</span>
+            <h3>Develop</h3>
+            <p>Translating the approved design into a responsive, functional, and lightning-fast Shopify storefront.</p>
+          </div>
+          <div class="process-step">
+            <span class="step-num">04</span>
+            <h3>Refine</h3>
+            <p>Testing interactions, optimizing performance, and polishing every micro-detail for a flawless launch.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 06. Contact Section -->
+      <section id="contact" class="section fade-in">
+        <h2 class="section-title"><span class="num">06.</span> Get In Touch</h2>
+        <div class="contact-content">
+          <p>I'm currently available for freelance projects and open to full-time opportunities. If you have a Shopify project, landing page idea, or just want to say hi, I'd love to hear from you.</p>
+          
+          <a href="mailto:your.email@example.com" class="cta-button">Say Hello ↗</a>
+          
+          <div class="contact-links">
+            <a href="https://github.com/lilharutyunyan003" target="_blank">GitHub</a>
+            <span>/</span>
+            <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+            <span>/</span>
+            <a href="mailto:your.email@example.com">Email</a>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <p>Designed & Built by Lilit Harutyunyan</p>
+      </footer>
+
+    </main>
+  </div>
 
   <script src="script.js"></script>
 </body>
